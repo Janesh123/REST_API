@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Landing Page</title>
+<style>
+body{
+background: linear-gradient(-65deg, #800000 30%, rgba(0,0,0,0) 30%), url('landing.jpg');
+}
+.b {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;	
+}
+
+.b:hover {
+  background-color: #555555;
+  color: white;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align:center";>Welcome to our movie reservation system</h1>
+<hr width="80%">
+<br>
+<br>
+<form action="http://127.0.0.1:5000/book" style="text-align:center">
+<input type="submit" value="Reserve Tickets" class="b"><br>
+</form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+<html>
+<head>
+<title>Movie Booking Page</title>
+<style>
+body{
+background: linear-gradient(-65deg, #800000 30%, rgba(0,0,0,0) 30%), url('landing.jpg');
+}
+.b {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;	
+}
+
+.b:hover {
+  background-color: #555555;
+  color: white;
+}
+table, th, td {
+  border: 1px solid black;
+}
+table {
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align:center">Please select the movie to be booked</h1>
+<hr width="80%">
+<br>
+<br>
+<form action="http://127.0.0.1:5000/checkout" style="text-align:center" method="POST">
+<table>
+<tr>
+<td>ID</td>
+<td>Name</td>
+</tr>
+{% for dat in data %}
+<tr>
+   <p>{{ dat[0] }}
+   {{ dat[1] }}
+   <input type="radio" name="mov" value={{dat[0]}}></p>
+</tr>
+{% endfor %}
+</table>
+
+<input type="submit" value="Proceed to Checkout" class="b"><br>
+</form>
+</body>
+</html>
